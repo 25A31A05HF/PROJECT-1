@@ -1,17 +1,20 @@
-                                              ** 🧮 Simple Calculator in C**
+                                                    ** 🧮 Simple Calculator in C**
 
 ## 📌 Project Description
 
-A simple command-line calculator written in C that performs basic arithmetic operations such as addition, subtraction, multiplication, and division using user input.
+A command-line calculator written in C that performs basic arithmetic operations including addition, subtraction, multiplication, division, and modulus using user input.
 
 ---
 
 ## ⚙️ Features
 
-* Supports +, -, *, /
-* Uses `switch-case` for operation handling
+* Addition (+)
+* Subtraction (-)
+* Multiplication (*)
+* Division (/)
+* Modulus (%) using `fmod()`
 * Handles division by zero
-* Displays results with precision (2 decimal places)
+* Displays output with 2 decimal precision
 
 ---
 
@@ -19,49 +22,74 @@ A simple command-line calculator written in C that performs basic arithmetic ope
 
 * Takes operator as input (`char`)
 * Takes two numbers (`double`)
-* Uses `switch` to perform the selected operation
-* Includes error handling for invalid operator and division by zero
+* Uses `switch-case` for operation selection
+* Uses `fmod()` for modulus operation
+* Handles invalid operator and division errors
+
+---
+
+## ⏱️ Time Complexity
+
+**O(1)**
+Executes a fixed number of operations regardless of input.
+
+---
+
+## 💾 Space Complexity
+
+**O(1)**
+Uses constant memory (few variables only).
 
 ---
 
 ## ▶️ How to Run
 
-### Compile
+Compile:
 
-```bash id="l3n7yy"
-gcc calculator.c -o calculator
+```bash id="c1x9nq"
+gcc calculator.c -o calculator -lm
 ```
 
-### Execute
+Run:
 
-```bash id="p9k3rx"
+```bash id="o7k3vr"
 ./calculator
 ```
 
 ---
 
-## 💻 Sample Output
+## 💻 Sample Input & Output
 
-```id="c5o1b2"
-Enter an operator (+, -, *, /): *
-Enter two operands: 6 4
-6.00 * 4.00 = 24.00
+### Addition
+
+```id="m9q2sw"
+Enter an operator (+, -, *, /, %): +
+Enter two operands: 4 3
+4.00 + 3.00 = 7.00
 ```
 
----
+### Modulus
 
-## ⚠️ Error Handling
+```id="6v4kxp"
+Enter an operator (+, -, *, /, %): %
+Enter two operands: 10 3
+10.00 % 3.00 = 1.00
+```
 
-* Displays error for invalid operator
-* Prevents division by zero
+### Division by Zero
 
----
+```id="8l1rty"
+Enter an operator (+, -, *, /, %): /
+Enter two operands: 5 0
+Error! Division by zero is not allowed.
+```
 
-## 📂 File Structure
+### Invalid Operator
 
-```id="h3x2nm"
-calculator.c
-README.md
+```id="z3w8bn"
+Enter an operator (+, -, *, /, %): @
+Enter two operands: 2 2
+Error! Operator is not correct.
 ```
 
 ---
@@ -70,7 +98,7 @@ README.md
 
 * Add loop for continuous calculations
 * Menu-driven interface
-* Support more operations (modulus, power)
+* Add advanced operations
 
 ---
 
